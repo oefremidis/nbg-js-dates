@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dates</title>
+</head>
+
+<body>
+  <script>
+    const today = new Date();
+
+    // day numeric, 2-digit
+    // weekday narrow, short, long
+    // year numeric, 2-digit
+    // month numeric, 2-digit, narrow, short, long
+    // hour numeric, 2-digit
+    // minute numeric, 2-digit
+    // second numeric, 2-digit
+
+
+    const options = {
+      weekday: 'long',
+      year: 'numeric',
+      month: 'short',
+      day: 'numeric'
+    };
+
+    console.log(today);
+
+    console.log(today.toLocaleDateString());
+    console.log(today.toLocaleDateString('el-GR'));
+    console.log(today.toLocaleDateString('el-GR', options));
+
+    console.log('--------------------------');
+
+    console.log(today.toLocaleDateString('en-UK'));
+    console.log(today.toLocaleDateString('en-UK', options));
+
+  </script>
+</body>
+
+</html>
